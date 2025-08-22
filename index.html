@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Music Picks — Classic Rock, Jazz & World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎵 Your Music App</h1>
+    <p>Seeded with your favorites: <em>Genesis, The Beatles, The Rolling Stones, Eric Clapton, Nina Simone, Goran Project, Cesária Évora, Paco de Lucía</em>.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>👍 Your Likes</h2>
+      <div id="likes" class="pillbox"></div>
+      <div class="controls">
+        <input id="artistSearch" type="text" placeholder="Add more artists…" autocomplete="off" />
+        <div id="suggestions" class="suggestions"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>✨ Recommendations</h2>
+      <p class="hint">Based on tag overlap with what you like. Click + to add, − to remove. Scores update live.</p>
+      <div id="recoList" class="cards"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🎧 Quick-Play Links</h2>
+      <p class="hint">Launch a tab with “top tracks” for an artist on YouTube or Spotify.</p>
+      <div id="quickPlay" class="cards"></div>
+    </section>
+
+    <section class="panel">
+      <h2>📄 Export</h2>
+      <button id="exportBtn">Download your liked artists (.json)</button>
+      <a id="exportLink" class="download" style="display:none;"></a>
+    </section>
+  </main>
+
+  <footer>
+    <small>Made for you. No tracking, all local in your browser.</small>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
